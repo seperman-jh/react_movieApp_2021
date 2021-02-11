@@ -1,10 +1,15 @@
 import React from "react"
+import {stringify} from "querystring";
 
 
-function Pizza(){
+function Pizza( {topping} :any   /*props : any {}*/){
+
+
+
     return(
         <div className="Topping">
-            <h2>Pizza - Topping</h2>
+            <h2>Pizza - Topping :  {topping}</h2>
+            {/*<h2>Pizza - Topping {props.topping}</h2>*/}
         </div>
     );
 
