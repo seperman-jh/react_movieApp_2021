@@ -7,6 +7,12 @@ interface Istate {
 
 class App extends React.Component <{}, Istate>  {
 
+    constructor(props : any) {
+        super(props);
+        console.log("Mount Start");
+
+    }
+
 
     state = {
       count : 0
@@ -24,7 +30,28 @@ class App extends React.Component <{}, Istate>  {
 
     };
 
+    componentDidMount() {
+        console.log("Component Rendered!")
+    }
+
+    componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<Istate>, snapshot?: any) {
+
+        console.log(prevState);
+        console.log("Component updated!!");
+    }
+
+    componentWillUnmount() {
+
+        console.log("Mount Killed!");
+    }
+
+
+
+
     render (){
+
+        console.log("Rendering....");
+
         return (
             <div className = "State_Class">
                 <h2>
