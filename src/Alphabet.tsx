@@ -27,7 +27,9 @@ class Alphabet extends React.Component <{},IState> {
                     {this.state.letters.map((letter:any) =>
                         <li key={letter} data-letter = {letter} >
                             {letter}
+                            {/*<button onClick={() => this.handleClick(letter)}>click</button>*/}
                             <button onClick={this.handleClick.bind(this,letter)}>click</button>
+
                         </li>
 
                     )}
