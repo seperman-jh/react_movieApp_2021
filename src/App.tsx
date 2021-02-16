@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 interface Istate {
     count: number;
     isLoading :boolean;
+    book:boolean;
 }
 
 class App extends React.Component <{}, Istate>  {
@@ -14,7 +15,8 @@ class App extends React.Component <{}, Istate>  {
 
         this.state = {
             count : 0,
-            isLoading : true
+            isLoading : true,
+            book : false
         }
 
         this.remove = this.remove.bind(this);
@@ -39,7 +41,7 @@ class App extends React.Component <{}, Istate>  {
     componentDidMount() {
         console.log("Component Rendered!");
 
-        setTimeout (() => {this.setState(current => ({isLoading : true}))}, 6000)
+        setTimeout (() => {this.setState(current => ({isLoading : true, book : true}))}, 6000)
         //setTimeout (() => {this.setState({isLoading : false})}, 3000) // setState는 interface 안에 값만 사용할수 있도록 정의되있음
 
         //setTimeout (() => {this.state.isLoading = false}, 3000)
